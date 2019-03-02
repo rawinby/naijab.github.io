@@ -9116,6 +9116,11 @@ react-icons@^3.4.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.4.0.tgz#3be5139a81bad5fa8ffbc0a87137275dc7a75737"
   integrity sha512-5cyYrl34KGovU/MH3YO+wN1k787vv3EKLeGDyaGOY92jSTQ/xRjkQ7iim5Ml9rgMLU1i0vszev80kWV4uRZ3Bw==
 
+react-if@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/react-if/-/react-if-3.1.3.tgz#f40a1c9fd652aca36792c18507609d2d76b199e0"
+  integrity sha512-8US5Mgz8iD4Xqlv0POoqWROMXcN8fIo+c+WeLYF/cuEAThxmcjUNnrLWBSWGme8E7YYQzKSojM4CYNYX2FlHGw==
+
 react-is@^16.8.1:
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
