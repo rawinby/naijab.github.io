@@ -1,5 +1,4 @@
 @import "./config.scss";
-@import url("https://fonts.googleapis.com/css?family=Kanit:400,700");
 
 /*Common Style*/
 body {
@@ -24,5 +23,28 @@ h4::before,
 h5::before,
 h6::before {
   content: "> ";
-  font-weight: 500;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $highlightFont;
+  font-weight: bold;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $primaryColor;
+}
+
+/*Prismjs*/
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0.2rem;
+  padding-left: 2.8rem;
 }
