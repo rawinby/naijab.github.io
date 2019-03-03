@@ -43,6 +43,11 @@ a:visited {
   color: $primaryColor;
 }
 
+footer {
+  padding: 3rem;
+  background: $darkGreyColor;
+}
+
 /*Prismjs*/
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding: 0.2rem;
