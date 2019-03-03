@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
             "เขียนแอพ",
           ]}
         />
-        <PostList posts={posts} />
+        <PostList posts={posts} isHome />
         <Row className="d-flex justify-content-center mt-2 mb-5">
           <If condition={posts.length >= 11}>
             <Then>
