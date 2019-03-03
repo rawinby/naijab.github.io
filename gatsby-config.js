@@ -61,15 +61,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-105769431-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `naijab.com `,
-        short_name: `naijab.com - just a lonely man likes coding.`,
+        name: `naijab.com - just a lonely man likes coding.`,
+        short_name: `naijab.com`,
         start_url: `/`,
         background_color: `#323232`,
         theme_color: `#f44336`,
