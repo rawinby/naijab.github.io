@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
-
+import { graphql, Link } from "gatsby"
 import Layout from "../components/container/layout"
 import SEO from "../components/seo"
-
 import PostList from "../components/post/post-list"
+import { Button, Row } from "reactstrap"
+import { If, Then } from "react-if"
 
 class BlogIndex extends React.Component {
   render() {
@@ -30,6 +30,17 @@ class BlogIndex extends React.Component {
           ]}
         />
         <PostList posts={posts} />
+        <Row className="d-flex justify-content-center mt-2 mb-5">
+          <If condition={posts.length >= 11}>
+            <Then>
+              <Link to="2">
+                <Button color="primary" size="lg">
+                  บทความเพิ่มเติม
+                </Button>
+              </Link>
+            </Then>
+          </If>
+        </Row>
       </Layout>
     )
   }
@@ -44,7 +55,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 11
+    ) {
       edges {
         node {
           excerpt
