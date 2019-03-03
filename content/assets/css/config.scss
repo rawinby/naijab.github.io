@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Pridi:400,700&subset=thai");
+
 /*Font*/
-$defaultFont: "Kanit", sans-serif;
+$defaultFont: "Pridi", serif;
+$highlightFont: "Pridi", serif;
 
 /*Color*/
+$primaryColor: #f44336;
+$lightPrimaryColor: lighten($primaryColor, 10%);
+$darkPrimaryColor: darken($primaryColor, 10%);
 $whiteGreyColor: #fafafa;
 $darkGreyColor: #212121;
 
-$defaultFontColor: $darkGreyColor;
+$textColor: $darkGreyColor;
 $backgroundColor: $whiteGreyColor;
 $blockquoteColor: #616161;
 
