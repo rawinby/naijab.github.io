@@ -49,9 +49,19 @@ a:visited {
   padding-top: 5rem;
 }
 
+.home-container {
+  max-width: $siteWidth;
+  padding-top: 0rem;
+}
+
 .navbar-light-shadow {
   background: #ffffff !important;
   box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 20%);
+}
+
+.nav-item,
+.navbar-brand {
+  margin: 0 0.5rem !important;
 }
 
 footer {
