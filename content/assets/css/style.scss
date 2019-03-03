@@ -8,3 +8,21 @@ body {
   background: $backgroundColor;
   color: $defaultFontColor;
 }
+
+blockquote {
+  color: $blockquoteColor;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  content: "> ";
+  font-weight: 500;
+}
