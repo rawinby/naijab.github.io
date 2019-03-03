@@ -12,7 +12,7 @@ $whiteGreyColor: #fafafa;
 $darkGreyColor: #212121;
 
 $textColor: $darkGreyColor;
-$backgroundColor: $whiteGreyColor;
+$backgroundColor: darken($whiteGreyColor, 0.1%);
 $blockquoteColor: lighten($darkGreyColor, 30%);
 
 /*Size*/

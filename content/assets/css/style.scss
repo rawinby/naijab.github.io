@@ -6,6 +6,7 @@ body {
   font-size: $fontSize;
   background: $backgroundColor;
   color: $textColor;
+  padding-top: 3rem;
 }
 
 blockquote {
@@ -45,6 +46,12 @@ a:visited {
 
 .default-container {
   max-width: $siteWidth;
+  padding-top: 5rem;
+}
+
+.navbar-light-shadow {
+  background: #ffffff !important;
+  box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 20%);
 }
 
 footer {
