@@ -1,7 +1,7 @@
 {
   "name": "naijab-com-website",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Just a simeple blog of Nattapon Pondongnok",
   "version": "0.1.0",
   "author": "Nattapon Pondongnok <nainatjab999@gmail.com>",
   "dependencies": {
@@ -24,6 +24,7 @@
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.3.0",
     "gatsby-transformer-sharp": "^2.1.15",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
     "react": "^16.8.3",
@@ -43,6 +44,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "format": "prettier --write src/**/*.{js,jsx}"
   }
 }
