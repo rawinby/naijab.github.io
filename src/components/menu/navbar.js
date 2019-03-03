@@ -26,33 +26,33 @@ const NavBar = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <Link to="/app">
-              <NavLink>APP</NavLink>
+            <Link to="/app" className="nav-link">
+              APP
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/web">
-              <NavLink>WEB</NavLink>
+            <Link to="/web" className="nav-link">
+              WEB
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/game">
-              <NavLink>GAME</NavLink>
+            <Link to="/game" className="nav-link">
+              GAME
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/tech">
-              <NavLink>TECH</NavLink>
+            <Link to="/tech" className="nav-link">
+              TECH
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/life">
-              <NavLink>LiFE</NavLink>
+            <Link to="/life" className="nav-link">
+              LiFE
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/all">
-              <NavLink>ALL</NavLink>
+            <Link to="/all" className="nav-link">
+              ALL
             </Link>
           </NavItem>
         </Nav>
