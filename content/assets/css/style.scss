@@ -1,0 +1,10 @@
+@import "./config.scss";
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,700");
+
+/*Common Style*/
+body {
+  font-family: $defaultFont;
+  font-size: $fontSize;
+  background: $backgroundColor;
+  color: $defaultFontColor;
+}
