@@ -1,22 +1,36 @@
 import React from "react"
 import { PropTypes } from "prop-types"
 import { Link } from "gatsby"
-import { rhythm } from "../../utils/typography"
+import {
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardImg,
+} from "reactstrap"
 
-const PostItem = ({ title, slug, date }) => {
+const PostItem = ({ id, title, slug, date, isHome }) => {
+  const postSizeInHome = id > 1 ? 4 : 6
   return (
-    <div>
-      <h3
-        style={{
-          marginBottom: rhythm(1 / 4),
-        }}
-      >
-        <Link style={{ boxShadow: `none` }} to={slug}>
-          {title}
-        </Link>
-      </h3>
-      <small>{date}</small>
-    </div>
+    <Col sm={isHome ? postSizeInHome : 4} className="pb-4">
+      <Card className="post-item">
+        <CardImg
+          top
+          width="100%"
+          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
+          alt="Card image cap"
+        />
+        <CardBody>
+          <CardTitle>
+            <Link to={slug}>
+              <h3>{title}</h3>
+            </Link>
+          </CardTitle>
+          <CardSubtitle>{date}</CardSubtitle>
+        </CardBody>
+      </Card>
+    </Col>
   )
 }
 
