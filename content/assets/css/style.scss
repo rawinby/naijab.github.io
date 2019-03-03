@@ -43,6 +43,10 @@ a:visited {
   color: $primaryColor;
 }
 
+.default-container {
+  max-width: $siteWidth;
+}
+
 footer {
   padding: 2.9rem;
   color: #ffffff;

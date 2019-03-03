@@ -13,7 +13,8 @@ $darkGreyColor: #212121;
 
 $textColor: $darkGreyColor;
 $backgroundColor: $whiteGreyColor;
-$blockquoteColor: #616161;
+$blockquoteColor: lighten($darkGreyColor, 30%);
 
 /*Size*/
 $fontSize: 1.2rem;
+$siteWidth: 45rem;
