@@ -18,9 +18,9 @@ const NavBar = () => {
     <Navbar
       color="light"
       fixed="top"
-      light
+      dark
       expand="md"
-      className="navbar-light-shadow"
+      className="navbar-red-shadow"
     >
       <Container>
         <NavbarBrand href="/">naijab.com</NavbarBrand>
