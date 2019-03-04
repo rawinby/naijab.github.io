@@ -19,7 +19,6 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
-                tags
               }
             }
           }
@@ -58,33 +57,6 @@ exports.createPages = ({ graphql, actions }) => {
         path: i === 0 ? `/` : `/${i + 1}`,
         component: path.resolve("./src/templates/blog-list.js"),
         context: {
-          limit: postsPerPage,
-          skip: i * postsPerPage,
-          numPages,
-          currentPage: i + 1,
-        },
-      })
-    })
-
-    // Create tags blog post list pages
-    let tags = []
-    _.each(posts, edge => {
-      if (_.get(edge, "node.frontmatter.tags")) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-        console.log("tag: ", tags)
-      }
-    })
-
-    tags = _.uniq(tags)
-
-    tags.forEach((tag, i) => {
-      const tags = `/tags/${_.kebabCase(tag)}`
-      // const pages = `${i === 0 ? `/` : `/${i + 1}`}`
-      createPage({
-        path: `/tags/${_.kebabCase(tag)}/`,
-        component: path.resolve("./src/templates/blog-tags.js"),
-        context: {
-          tag,
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,
