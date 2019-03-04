@@ -4,6 +4,7 @@ module.exports = {
     author: `Nattapon Pondongnok`,
     description: `just a lonely man likes coding.`,
     siteUrl: `https://naijab.com/`,
+    lastUpdate: `4 Feb 2019`,
     social: {
       github: `naijab`,
       facebook: `naijabcom`,
