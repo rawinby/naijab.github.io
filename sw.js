@@ -26,23 +26,31 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-4afdea3a05ae7cb87453.js"
+    "url": "webpack-runtime-99f308035c1dee3220d0.js"
   },
   {
-    "url": "styles.614850feec08ae5bfaa1.css"
+    "url": "styles.e92fc0630957debb23ca.css"
   },
   {
     "url": "styles-c42e77c000baa162242f.js"
   },
   {
-    "url": "app-f1eca28659ca5787cfd6.js"
+    "url": "app-89569caefdc2a8c0ff33.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e9d2455f3d4c0f15dbd3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "af37fb19440c709ff055998542e1a7dc"
+    "revision": "d2bf3cc2ca8a8ed7768c6973edd1e7b4"
+  },
+  {
+    "url": "google-fonts/s/pridi/v4/2sDQZG5JnZLfkcWJqWg.woff2",
+    "revision": "57945a116452ad0220fd7f95c0b09811"
+  },
+  {
+    "url": "google-fonts/s/pridi/v4/2sDdZG5JnZLfkc0mjH0wT0A.woff2",
+    "revision": "51a4a5d318d09b8e5d47a4e84c04eae2"
   },
   {
     "url": "0-548e65dfd1739942eef2.js"
