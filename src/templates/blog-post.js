@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
-import Bio from "../components/bio"
+import AuthorCard from "../components/card/AuthorCard"
 import Layout from "../components/container/layout"
 import DisqusComment from "../components/comment/disqus"
 
@@ -18,11 +18,11 @@ const BlogPostTemplate = props => {
       isSmall
     >
       <h1>{post.frontmatter.title}</h1>
-      <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
+      <Image fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
       <p>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <Bio />
+      <AuthorCard />
 
       <ul
         style={{
@@ -70,16 +70,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
           publicURL
           childImageSharp {
-            sizes(maxWidth: 630) {
-              ...GatsbyImageSharpSizes
+            fluid(maxHeight: 250) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

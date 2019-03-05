@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-import PropTypes from "prop-types"
 import { If, Then, Else } from "react-if"
 import PostItem from "./post-item"
 import { Row } from "reactstrap"
@@ -33,10 +32,6 @@ const PostList = ({ posts, isHome }) => {
       </If>
     </Fragment>
   )
-}
-
-PostList.propTypes = {
-  posts: PropTypes.array.isRequired,
 }
 
 export default PostList

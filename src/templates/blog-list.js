@@ -30,12 +30,7 @@ const BlogListTemplate = props => {
 export default BlogListTemplate
 
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query blogListPageQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
@@ -48,16 +43,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             description
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 250) {
+                fluid(maxHeight: 250) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
