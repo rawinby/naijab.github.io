@@ -41,7 +41,7 @@ const NavBar = () => {
                     </Link>
                   </NavItem>
                   <NavItem>
-                    <Link to="/web" className="nav-link">
+                    <Link to="/programming" className="nav-link">
                       PROGRAMMING
                     </Link>
                   </NavItem>
