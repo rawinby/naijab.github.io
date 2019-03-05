@@ -5,13 +5,15 @@ import Footer from "../footer/footer"
 import SEO from "../seo"
 
 const Layout = props => {
-  const containerStyle = props.isHome ? "home-container" : "default-container"
+  const containerStyle = props.isSmall ? "post-container" : "default-container"
   return (
     <Fragment>
       <SEO
         title={props.title}
+        featuredImage={props.featuredImage}
         description={props.description}
         keywords={props.keywords}
+        slug={props.slug}
       />
       <NavBar />
       <Container className={containerStyle}>{props.children}</Container>
