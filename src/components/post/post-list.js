@@ -11,11 +11,12 @@ const PostList = ({ posts, isHome }) => {
         <Then>
           <Row>
             {posts.map(({ node }, key) => {
-              const { title, date } = node.frontmatter
+              const { title, date, featuredImage } = node.frontmatter
               const { slug } = node.fields
               return (
                 <PostItem
                   title={title}
+                  image={featuredImage.childImageSharp.fluid}
                   date={date}
                   slug={slug}
                   key={key}

@@ -9,18 +9,14 @@ import {
   CardSubtitle,
   CardImg,
 } from "reactstrap"
+import Image from "gatsby-image"
 
-const PostItem = ({ id, title, slug, date, isHome }) => {
+const PostItem = ({ id, image, title, slug, date, isHome }) => {
   const postSizeInHome = id > 1 ? 4 : 6
   return (
     <Col sm={isHome ? postSizeInHome : 4} className="pb-4">
       <Card className="post-item">
-        <CardImg
-          top
-          width="100%"
-          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-          alt="Card image cap"
-        />
+        <Image className="card-img" fluid={image} />
         <CardBody>
           <CardTitle>
             <Link to={slug}>
