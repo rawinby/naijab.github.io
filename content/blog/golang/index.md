@@ -3,6 +3,7 @@ title: Golang
 date: "2015-05-01T22:12:03.284Z"
 description: What Movie...
 tags: ["golang", "app"]
+featuredImage: "./salty_egg.jpg"
 ---
 
 This is my first post on my new fake blog! How exciting!

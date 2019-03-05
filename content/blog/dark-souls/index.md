@@ -3,6 +3,7 @@ title: Game Dark Souls
 date: "2015-05-01T22:12:03.284Z"
 description: Hello Some Time...
 tags: ["game", "dark-souls"]
+featuredImage: "./salty_egg.jpg"
 ---
 
 This is my first post on my new fake blog! How exciting!

@@ -1,6 +1,4 @@
-import React, { Fragment } from "react"
-import { Container } from "reactstrap"
-import Styled from "styled-components"
+import React from "react"
 
 const Footer = () => {
   return (

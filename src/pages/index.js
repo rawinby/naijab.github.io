@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/container/layout"
-import SEO from "../components/seo"
 import PostList from "../components/post/post-list"
 import { Button, Row } from "reactstrap"
 import { If, Then } from "react-if"
