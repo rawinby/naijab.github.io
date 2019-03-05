@@ -41,6 +41,24 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `just a lonely man likes coding.`,
+        short_name: `naijab.com`,
+        start_url: `/`,
+        background_color: `#323232`,
+        theme_color: `#f44336`,
+        display: `minimal-ui`,
+        icon: `content/assets/logo-icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-105769431-1`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -87,24 +105,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `${siteMetadata.slogan}`,
-        short_name: `naijab.com`,
-        start_url: `/`,
-        background_color: `#323232`,
-        theme_color: `#f44336`,
-        display: `minimal-ui`,
-        icon: `content/assets/logo-icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-105769431-1`,
-      },
-    },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
