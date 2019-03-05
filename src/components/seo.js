@@ -3,46 +3,81 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, keywords, title }) => {
+const SEO = ({
+  title,
+  slug,
+  featuredImage,
+  keywords,
+  description,
+  lang,
+  meta,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
+            slogan
             description
+            keywords
             author
+            siteUrl
+            key {
+              facebookAppId
+            }
           }
         }
       }
     `
   )
 
+  const metaTitle = `${title || site.siteMetadata.slogan} | ${
+    site.siteMetadata.title
+  }`
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = featuredImage
+    ? `${site.siteMetadata.siteUrl}${featuredImage.substring(1)}`
+    : `${site.siteMetadata.siteUrl}`
+  const metaUrl = slug
+    ? `${site.siteMetadata.siteUrl}${slug.substring(1)}`
+    : `${site.siteMetadata.siteUrl}`
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
         },
         {
-          property: `og:title`,
-          content: `${title} | ${site.siteMetadata.title}`,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
+          property: `fb:app_id`,
+          content: site.siteMetadata.key.facebookAppId,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:title`,
+          content: metaTitle,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
         },
         {
           name: `twitter:card`,
@@ -54,7 +89,11 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
         },
         {
           name: `twitter:title`,
-          content: `${title} | ${site.siteMetadata.title}`,
+          content: metaTitle,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         },
         {
           name: `twitter:description`,
@@ -65,9 +104,9 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
           keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: keywords.concat(site.siteMetadata.keywords).join(`, `),
               }
-            : []
+            : site.siteMetadata.keywords.join(`, `)
         )
         .concat(meta)}
     />
@@ -75,7 +114,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `th`,
   meta: [],
   keywords: [],
 }
