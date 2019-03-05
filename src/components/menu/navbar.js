@@ -36,13 +36,13 @@ const NavBar = () => {
               <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <Link to="/app" className="nav-link">
-                      APP
+                    <Link to="/life" className="nav-link">
+                      LiFE
                     </Link>
                   </NavItem>
                   <NavItem>
                     <Link to="/web" className="nav-link">
-                      WEB
+                      PROGRAMMING
                     </Link>
                   </NavItem>
                   <NavItem>
@@ -53,16 +53,6 @@ const NavBar = () => {
                   <NavItem>
                     <Link to="/tech" className="nav-link">
                       TECH
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/life" className="nav-link">
-                      LiFE
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/all" className="nav-link">
-                      ALL
                     </Link>
                   </NavItem>
                 </Nav>
