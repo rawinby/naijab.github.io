@@ -82,7 +82,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
