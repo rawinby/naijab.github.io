@@ -13,10 +13,10 @@ const PostItem = ({ id, image, title, slug, date, isHome }) => {
         <CardBody>
           <CardTitle>
             <Link to={slug}>
-              <h3>{title}</h3>
+              <h5>{title}</h5>
             </Link>
+            <small>{date}</small>
           </CardTitle>
-          <CardSubtitle>{date}</CardSubtitle>
         </CardBody>
       </Card>
     </Col>

@@ -4,7 +4,7 @@ import { Button } from "reactstrap"
 
 const Pagination = ({ isFirst, isLast, prevPage, nextPage }) => {
   return (
-    <div className="navigation-container">
+    <div className="bottom-container">
       {!isFirst && (
         <Link to={prevPage}>
           <Button size="lg" className="float-left">
