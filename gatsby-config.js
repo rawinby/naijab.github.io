@@ -60,13 +60,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-105769431-1`,
-      },
-    },
-    `gatsby-plugin-feed`,
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `naijab.com - just a lonely man likes coding.`,
@@ -78,9 +71,24 @@ module.exports = {
         icon: `content/assets/logo-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-105769431-1`,
+      },
+    },
+    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-purgecss`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `yellow`,
+        showSpinner: true,
+      },
+    },
   ],
 }
