@@ -32,12 +32,15 @@ module.exports = {
       "nattapon pondongnok",
     ],
     siteUrl: `https://naijab.com/`,
-    lastUpdate: `${Date.now()}`,
+    key: {
+      facebookAppId: `155791385048238`,
+    },
     social: {
       github: `naijab`,
       facebook: `naijabcom`,
       twitter: `_naijab`,
     },
+    lastUpdate: `${Date.now()}`,
   },
   plugins: [
     {
