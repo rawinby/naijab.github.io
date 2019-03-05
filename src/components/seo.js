@@ -26,6 +26,11 @@ const SEO = ({
             key {
               facebookAppId
             }
+            social {
+              github
+              facebook
+              twitter
+            }
           }
         }
       }
@@ -84,8 +89,8 @@ const SEO = ({
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          name: `twitter:site`,
+          content: `@${site.siteMetadata.social.twitter}`,
         },
         {
           name: `twitter:title`,
