@@ -26,10 +26,10 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-99f308035c1dee3220d0.js"
+    "url": "webpack-runtime-18da49e8c65455afe6e5.js"
   },
   {
-    "url": "styles.e92fc0630957debb23ca.css"
+    "url": "styles.bf82acb3744bfce5caaa.css"
   },
   {
     "url": "styles-c42e77c000baa162242f.js"
@@ -42,7 +42,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d2bf3cc2ca8a8ed7768c6973edd1e7b4"
+    "revision": "21f24362e93a1b486c0e0c5e5c9f1394"
   },
   {
     "url": "google-fonts/s/pridi/v4/2sDQZG5JnZLfkcWJqWg.woff2",
@@ -53,10 +53,10 @@ self.__precacheManifest = [
     "revision": "51a4a5d318d09b8e5d47a4e84c04eae2"
   },
   {
-    "url": "0-548e65dfd1739942eef2.js"
+    "url": "0-1fd8decbd763fc28ba41.js"
   },
   {
-    "url": "component---src-pages-404-js-810f84b47dbe50924ea0.js"
+    "url": "component---src-pages-404-js-3c968285edc798c291a2.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json"
