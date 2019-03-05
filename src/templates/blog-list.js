@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PostList from "../components/post/post-list"
 import Layout from "../components/container/layout"
-import { Pagination, PaginationItem, Row } from "reactstrap"
+import { Button, Row } from "reactstrap"
 
 class BlogListTemplate extends React.Component {
   render() {
@@ -13,8 +13,9 @@ class BlogListTemplate extends React.Component {
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
-    const nextPage = (currentPage + 1).toString()
+    const prevPage =
+      currentPage - 1 === 1 ? "/" : `/page/${(currentPage - 1).toString()}`
+    const nextPage = `/page/${(currentPage + 1).toString()}`
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -23,31 +24,19 @@ class BlogListTemplate extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <PostList posts={posts} />
-        <Row className="d-flex justify-content-center mt-2 mb-5">
-          <Pagination>
-            {!isFirst && (
-              <PaginationItem>
-                <Link className="page-link" to={prevPage}>
-                  {" << "}
-                </Link>
-              </PaginationItem>
-            )}
-            {Array.from({ length: numPages }, (_, i) => (
-              <PaginationItem className={currentPage == i + 1 ? "active" : ""}>
-                <Link className="page-link" to={`/${i === 0 ? "" : i + 1}`}>
-                  {i + 1}
-                </Link>
-              </PaginationItem>
-            ))}
-            {!isLast && (
-              <PaginationItem>
-                <Link className="page-link" to={nextPage}>
-                  {" >> "}
-                </Link>
-              </PaginationItem>
-            )}
-          </Pagination>
-        </Row>
+        <div className="pt-5 pb-5">
+          {!isFirst && (
+            <Link to={prevPage}>
+              <Button className="float-left">{" << ใหม่กว่านี้"}</Button>
+            </Link>
+          )}
+
+          {!isLast && (
+            <Link to={nextPage}>
+              <Button className="float-right">{"เก่ากว่านี้ >> "}</Button>
+            </Link>
+          )}
+        </div>
       </Layout>
     )
   }
@@ -74,8 +63,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             title
+            description
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
