@@ -7,8 +7,7 @@ const NotFoundPage = props => {
     <Layout title="404 Not Found" location={props.location} isPostDetail>
       <h1>404 Not Found</h1>
       <p>
-        ขออภัยไม่พบหน้าที่ต้องการ :( <br />{" "}
-        <Link to="/all">ลองค้นหาบทความ</Link>
+        ขออภัยไม่พบหน้าที่ต้องการ :( <br /> <Link to="/">ลองค้นหาบทความ</Link>
       </p>
     </Layout>
   )
