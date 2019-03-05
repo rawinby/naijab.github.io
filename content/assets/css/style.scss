@@ -65,13 +65,24 @@ a:visited {
   padding: 5rem 0;
 }
 
+.menu-mobile-trigger {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .navbar-red-shadow {
-  background: linear-gradient(to right, $primaryColor, $orangeColor);
+  background: linear-gradient(to right, $primaryColor, $darkPrimaryColor);
   box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 20%);
 }
 
 .nav-item {
   margin: 0 0.5rem;
+  .nav-link {
+    color: #ffffff;
+    &:hover {
+      color: #ffe419;
+    }
+  }
 }
 
 .navbar-brand {

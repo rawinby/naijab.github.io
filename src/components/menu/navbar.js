@@ -21,7 +21,6 @@ const NavBar = () => {
           <Navbar
             color="light"
             fixed="top"
-            dark
             expand="md"
             className="navbar-red-shadow"
           >
@@ -32,7 +31,14 @@ const NavBar = () => {
                   className="align-middle"
                 />
               </Link>
-              <NavbarToggler onClick={() => toggle(!isOpen)} />
+
+              <div
+                className="d-md-none menu-mobile-trigger"
+                onClick={() => toggle(!isOpen)}
+              >
+                MENU
+              </div>
+
               <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
