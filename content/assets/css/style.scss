@@ -67,9 +67,12 @@ a:visited {
   box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 20%);
 }
 
-.nav-item,
-.navbar-brand {
+.nav-item {
   margin: 0 0.5rem;
+}
+
+.navbar-brand {
+  margin: 0;
 }
 
 .post-item {
