@@ -108,6 +108,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-polyfill-io`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
@@ -116,8 +117,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `yellow`,
-        showSpinner: true,
+        color: `#191919`,
+        minimum: 0.5,
+        trickle: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Pridi`,
+            subsets: [`latin`, `thai`],
+            variants: [`400`, `700`],
+          },
+        ],
       },
     },
   ],
