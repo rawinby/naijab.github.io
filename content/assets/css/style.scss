@@ -52,13 +52,12 @@ a:visited {
   color: $primaryColor;
 }
 
-.default-container {
+.post-container {
   max-width: $siteWidth;
   padding-top: 5rem;
 }
 
-.home-container {
-  max-width: $siteWidth + 25;
+.default-container {
   padding-top: 3rem;
 }
 
@@ -76,11 +75,10 @@ a:visited {
 }
 
 .post-item {
-  background: none;
   border: none;
   .card-body {
-    padding: 0;
     padding-top: 1rem;
+    box-shadow: 0 0.1rem 0.4rem darken($whiteGreyColor, 10%);
   }
   .card-img-top {
     border-radius: 0;
