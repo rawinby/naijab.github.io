@@ -1,65 +1,57 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/container/layout"
-import SEO from "../components/seo"
-import Image from "gatsby-image"
-import { DiscussionEmbed } from "disqus-react"
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-    const disqusShortname = "naijab"
-    const disqusConfig = {
-      identifier: post.id,
-      title: post.frontmatter.title,
-    }
+import DisqusComment from "../components/comment/disqus"
 
-    return (
-      <Layout location={this.props.location} title={siteTitle} isPostDetail>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <h1>{post.frontmatter.title}</h1>
-        <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
-        <p>{post.frontmatter.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Bio />
+const BlogPostTemplate = props => {
+  const post = props.data.markdownRemark
+  const { previous, next } = props.pageContext
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                {"<-"} {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} {"->"}
-              </Link>
-            )}
-          </li>
-        </ul>
+  return (
+    <Layout
+      title={post.frontmatter.title}
+      featuredImage={post.frontmatter.featuredImage.publicURL}
+      description={post.frontmatter.description || post.excerpt}
+      slug={props.location.pathname}
+      isSmall
+    >
+      <h1>{post.frontmatter.title}</h1>
+      <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
+      <p>{post.frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
+      <Bio />
 
-        <div className="pt-5 pb-5">
-          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-        </div>
-      </Layout>
-    )
-  }
+      <ul
+        style={{
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          listStyle: `none`,
+          padding: 0,
+        }}
+      >
+        <li>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              {"<-"} {previous.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} {"->"}
+            </Link>
+          )}
+        </li>
+      </ul>
+
+      <DisqusComment title={post.frontmatter.title} id={post.id} />
+    </Layout>
+  )
 }
 
 export default BlogPostTemplate
@@ -81,6 +73,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         featuredImage {
+          publicURL
           childImageSharp {
             sizes(maxWidth: 630) {
               ...GatsbyImageSharpSizes

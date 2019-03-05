@@ -1,45 +1,30 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
-import PostList from "../components/post/post-list"
+import { graphql } from "gatsby"
 import Layout from "../components/container/layout"
-import { Button, Row } from "reactstrap"
+import PostList from "../components/post/post-list"
+import Pagination from "../components/menu/pagination"
 
-class BlogListTemplate extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-    const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage =
-      currentPage - 1 === 1 ? "/" : `/page/${(currentPage - 1).toString()}`
-    const nextPage = `/page/${(currentPage + 1).toString()}`
+const BlogListTemplate = props => {
+  const { data } = props
+  const posts = data.allMarkdownRemark.edges
+  const { currentPage, numPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? "/" : `/page/${(currentPage - 1).toString()}`
+  const nextPage = `/page/${(currentPage + 1).toString()}`
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={siteTitle}
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <PostList posts={posts} />
-        <div className="pt-5 pb-5">
-          {!isFirst && (
-            <Link to={prevPage}>
-              <Button className="float-left">{" << ใหม่กว่านี้"}</Button>
-            </Link>
-          )}
-
-          {!isLast && (
-            <Link to={nextPage}>
-              <Button className="float-right">{"เก่ากว่านี้ >> "}</Button>
-            </Link>
-          )}
-        </div>
-      </Layout>
-    )
-  }
+  return (
+    <Layout>
+      <PostList posts={posts} />
+      <Pagination
+        prevPage={prevPage}
+        nextPage={nextPage}
+        isFirst={isFirst}
+        isLast={isLast}
+      />
+    </Layout>
+  )
 }
 
 export default BlogListTemplate
