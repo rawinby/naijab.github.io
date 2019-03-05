@@ -4,12 +4,17 @@ import Bio from "../components/bio"
 import Layout from "../components/container/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
-
+import { DiscussionEmbed } from "disqus-react"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const disqusShortname = "naijab.com"
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle} isPostDetail>
@@ -48,6 +53,8 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }

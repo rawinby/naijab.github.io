@@ -1,14 +1,7 @@
 import React from "react"
 import { PropTypes } from "prop-types"
 import { Link } from "gatsby"
-import {
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardImg,
-} from "reactstrap"
+import { Col, Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 import Image from "gatsby-image"
 
 const PostItem = ({ id, image, title, slug, date, isHome }) => {
@@ -16,7 +9,7 @@ const PostItem = ({ id, image, title, slug, date, isHome }) => {
   return (
     <Col sm={isHome ? postSizeInHome : 4} className="pb-4">
       <Card className="post-item">
-        <Image className="card-img" fluid={image} />
+        <Image className="card-img-top" fluid={image} />
         <CardBody>
           <CardTitle>
             <Link to={slug}>
