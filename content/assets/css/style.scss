@@ -61,6 +61,10 @@ a:visited {
   padding-top: 3rem;
 }
 
+.bottom-container {
+  padding: 5rem 0;
+}
+
 .navbar-red-shadow {
   background: linear-gradient(to right, $primaryColor, $orangeColor);
   box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 20%);
