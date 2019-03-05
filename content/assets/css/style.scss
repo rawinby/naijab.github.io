@@ -82,6 +82,12 @@ a:visited {
     &:hover {
       color: #ffe419;
     }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
   }
 }
 
