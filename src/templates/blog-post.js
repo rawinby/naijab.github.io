@@ -14,6 +14,7 @@ const BlogPostTemplate = props => {
       title={post.frontmatter.title}
       featuredImage={post.frontmatter.featuredImage.publicURL}
       description={post.frontmatter.description || post.excerpt}
+      keywords={post.frontmatter.tags}
       slug={props.location.pathname}
       isSmall
     >
@@ -61,7 +62,7 @@ export const pageQuery = graphql`
         featuredImage {
           publicURL
           childImageSharp {
-            fluid(maxHeight: 250) {
+            fluid(maxHeight: 400) {
               ...GatsbyImageSharpFluid
             }
           }
