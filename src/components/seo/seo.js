@@ -1,7 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import uniq from "lodash/uniq"
 
 const SEO = ({
   title,
@@ -40,6 +40,11 @@ const SEO = ({
   const metaTitle = `${title || site.siteMetadata.slogan} | ${
     site.siteMetadata.title
   }`
+  const metaKeywords =
+    keywords.length > 0
+      ? uniq(keywords.concat(site.siteMetadata.keywords)).join(`, `)
+      : site.siteMetadata.keywords.join(`, `)
+
   const metaDescription = description || site.siteMetadata.description
   const metaImage = featuredImage
     ? `${site.siteMetadata.siteUrl}${featuredImage.substring(1)}`
@@ -59,6 +64,10 @@ const SEO = ({
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: metaKeywords,
         },
         {
           property: `fb:app_id`,
@@ -104,16 +113,7 @@ const SEO = ({
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.concat(site.siteMetadata.keywords).join(`, `),
-              }
-            : site.siteMetadata.keywords.join(`, `)
-        )
-        .concat(meta)}
+      ]}
     />
   )
 }
@@ -122,14 +122,6 @@ SEO.defaultProps = {
   lang: `th`,
   meta: [],
   keywords: [],
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
