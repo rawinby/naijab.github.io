@@ -107,21 +107,20 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     `gatsby-plugin-polyfill-io`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#191919`,
-        minimum: 0.5,
-        trickle: false,
-      },
-    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
