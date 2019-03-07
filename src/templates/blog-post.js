@@ -19,7 +19,10 @@ const BlogPostTemplate = props => {
     >
       <h1>{post.frontmatter.title}</h1>
       <span className="post-date">{post.frontmatter.date}</span>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        className="post-content"
+      />
       <TagList tags={post.frontmatter.tags} />
       <hr />
       <AuthorCard />

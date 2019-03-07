@@ -23,6 +23,7 @@ blockquote {
   font-style: italic;
   padding-left: 1rem;
   padding-right: 1rem;
+  border-left: 0.3rem solid $primaryColor;
 }
 
 h1::before,
