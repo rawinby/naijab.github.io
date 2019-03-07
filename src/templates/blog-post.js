@@ -18,7 +18,7 @@ const BlogPostTemplate = props => {
       isSmall
     >
       <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
+      <span className="post-date">{post.frontmatter.date}</span>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <TagList tags={post.frontmatter.tags} />
       <hr />

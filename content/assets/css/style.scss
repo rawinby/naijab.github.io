@@ -54,7 +54,7 @@ a:visited {
 
 .post-container {
   max-width: $siteWidth;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .default-container {
@@ -93,6 +93,18 @@ a:visited {
 
 .navbar-brand {
   margin: 0;
+}
+
+.post-date {
+  color: lighten($darkGreyColor, 20%);
+  font-size: 1.2rem;
+}
+
+.post-content {
+  margin-top: 1rem;
+  &::first-letter {
+    font-size: 2rem;
+  }
 }
 
 .post-item {
