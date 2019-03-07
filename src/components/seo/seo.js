@@ -12,7 +12,7 @@ const SEO = ({
   lang,
   meta,
 }) => {
-  const { site } = useStaticQuery(
+  const { site, defaultFeaturedImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -33,6 +33,11 @@ const SEO = ({
             }
           }
         }
+        defaultFeaturedImage: file(
+          absolutePath: { regex: "/default_featured_image.jpg/" }
+        ) {
+          publicURL
+        }
       }
     `
   )
@@ -48,7 +53,9 @@ const SEO = ({
   const metaDescription = description || site.siteMetadata.description
   const metaImage = featuredImage
     ? `${site.siteMetadata.siteUrl}${featuredImage.substring(1)}`
-    : `${site.siteMetadata.siteUrl}`
+    : `${site.siteMetadata.siteUrl}${defaultFeaturedImage.publicURL.substring(
+        1
+      )}`
   const metaUrl = slug
     ? `${site.siteMetadata.siteUrl}${slug.substring(1)}`
     : `${site.siteMetadata.siteUrl}`
