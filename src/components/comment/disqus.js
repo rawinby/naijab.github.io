@@ -7,7 +7,7 @@ const DisqusComment = ({ id, title }) => {
     title: title,
   }
   return (
-    <div className="pt-5 pb-5">
+    <div className="mt-3 mb-5">
       <DiscussionEmbed shortname="naijab" config={disqusConfig} />
     </div>
   )
