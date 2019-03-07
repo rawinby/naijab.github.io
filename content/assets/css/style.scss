@@ -137,6 +137,7 @@ a:visited {
     box-shadow: 0 0.1rem 0.4rem darken($whiteGreyColor, 10%);
   }
   .card-img-top {
+    max-height: 10rem;
     border-radius: 0;
   }
   .card-subtitle {
