@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { Container } from "reactstrap"
 import NavBar from "../menu/navbar"
 import Footer from "../footer/footer"
-import SEO from "../seo"
+import SEO from "../seo/seo"
 
 const Layout = props => {
   const containerStyle = props.isSmall ? "post-container" : "default-container"
