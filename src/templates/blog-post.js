@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import AuthorCard from "../components/card/AuthorCard"
 import Layout from "../components/container/layout"
 import DisqusComment from "../components/comment/disqus"
