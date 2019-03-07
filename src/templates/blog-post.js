@@ -61,11 +61,6 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           publicURL
-          childImageSharp {
-            fluid(maxHeight: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
         date(formatString: "MMMM DD, YYYY")
       }
