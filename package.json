@@ -45,6 +45,7 @@
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-gatsby": "^0.1.8",
+    "gatsby-plugin-remove-console": "^0.0.2",
     "prettier": "^1.16.4"
   },
   "license": "MIT",

@@ -116,6 +116,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-polyfill-io`,
+    `gatsby-plugin-remove-console`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
