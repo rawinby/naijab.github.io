@@ -4,6 +4,7 @@ import AuthorCard from "../components/card/AuthorCard"
 import Layout from "../components/container/layout"
 import DisqusComment from "../components/comment/disqus"
 import TagList from "../components/tag/tag-list"
+import { Row, Col } from "reactstrap"
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
@@ -25,32 +26,44 @@ const BlogPostTemplate = props => {
       />
       <TagList tags={post.frontmatter.tags} />
       <hr />
-      <AuthorCard />
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              {"<-"} {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} {"->"}
-            </Link>
-          )}
-        </li>
-      </ul>
-      <DisqusComment title={post.frontmatter.title} id={post.id} />
+      <Row>
+        <Col sm="12" className="d-flex justify-content-center">
+          <AuthorCard />
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12">
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  {"<-"} {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} {"->"}
+                </Link>
+              )}
+            </li>
+          </ul>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12">
+          <DisqusComment title={post.frontmatter.title} id={post.id} />
+        </Col>
+      </Row>
     </Layout>
   )
 }

@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { FaGithub, FaFacebook, FaTwitter } from "react-icons/fa"
 
-const Bio = () => {
+const AuthorCard = () => {
   const bioQuery = useStaticQuery(
     graphql`
       query {
@@ -30,38 +29,25 @@ const Bio = () => {
 
   const { author, social } = bioQuery.site.siteMetadata
   return (
-    <div>
+    <div className="author-container">
       <Image
         fixed={bioQuery.avatar.childImageSharp.fixed}
         alt={author}
-        style={{
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
+        className="author-image"
       />
       <p>
         <strong>{author}</strong> <br /> แค่คนเหาชอบเขียนโค้ด คลั่งไคล้ Dark
-        Souls และร้องเพลงเป็นชีวิตจิตใจ
-        {` `}
+        Souls และร้องเพลงเป็นชีวิตจิตใจ <br />
+        follow me: <a href={`https://twitter.com/${social.twitter}`}>
+          twitter
+        </a>{" "}
+        <a href={`https://facebook.com/${social.facebook}`}>facebook</a>{" "}
+        <a href={`https://github.com/${social.github}`}>github</a>
         <br />
-        <a href={`https://github.com/${social.github}`}>
-          <FaGithub />
-        </a>
-        {` `}
-        <a href={`https://facebook.com/${social.facebook}`}>
-          <FaFacebook />
-        </a>
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          <FaTwitter />
-        </a>
+        <span>#linux #darksouls #javascript #music #art #tech</span>
       </p>
     </div>
   )
 }
 
-export default Bio
+export default AuthorCard

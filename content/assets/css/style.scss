@@ -53,6 +53,28 @@ a:visited {
   color: $primaryColor;
 }
 
+.author-container {
+  display: block;
+  float: left;
+  margin: 1rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  .author-image {
+    float: left;
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
+  p {
+    float: left;
+    font-size: 1.1rem;
+    margin: 0;
+    span {
+      color: darken($whiteGreyColor, 50%);
+    }
+  }
+}
+
 .post-container {
   max-width: $siteWidth;
   padding-top: 3rem;
