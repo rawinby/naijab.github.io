@@ -8,7 +8,6 @@ import { Row, Col } from "reactstrap"
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
-  const { previous, next } = props.pageContext
 
   return (
     <Layout
@@ -31,34 +30,7 @@ const BlogPostTemplate = props => {
           <AuthorCard />
         </Col>
       </Row>
-      <Row>
-        <Col sm="12">
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  {"<-"} {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} {"->"}
-                </Link>
-              )}
-            </li>
-          </ul>
-        </Col>
-      </Row>
+      <hr />
       <Row>
         <Col sm="12">
           <DisqusComment title={post.frontmatter.title} id={post.id} />
