@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
 import AuthorCard from "../components/card/AuthorCard"
 import Layout from "../components/container/layout"
 import DisqusComment from "../components/comment/disqus"
+import TagList from "../components/tag/tag-list"
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
@@ -18,12 +18,11 @@ const BlogPostTemplate = props => {
       isSmall
     >
       <h1>{post.frontmatter.title}</h1>
-      <Image fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
       <p>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <TagList tags={post.frontmatter.tags} />
       <hr />
       <AuthorCard />
-
       <ul
         style={{
           display: `flex`,
@@ -48,7 +47,6 @@ const BlogPostTemplate = props => {
           )}
         </li>
       </ul>
-
       <DisqusComment title={post.frontmatter.title} id={post.id} />
     </Layout>
   )
@@ -71,6 +69,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        tags
         featuredImage {
           publicURL
           childImageSharp {
