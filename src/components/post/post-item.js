@@ -8,7 +8,11 @@ const PostItem = ({ image, title, slug, date }) => {
     <Col sm={4} className="pb-4">
       <Card className="post-item">
         <Link to={slug}>
-          <Image className="card-img-top" fixed={image} />
+          <Image
+            className="card-img-top"
+            fixed={image}
+            style={{ width: `100%`, objectFit: `cover` }}
+          />
         </Link>
         <CardBody>
           <CardTitle>
