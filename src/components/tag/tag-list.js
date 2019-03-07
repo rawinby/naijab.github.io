@@ -9,8 +9,8 @@ const TagList = ({ tags }) => {
       tags{"() => "}
       <If condition={tags && tags.length > 0}>
         <Then>
-          {tags.map(tag => (
-            <Link to={`/tag/${tag}`}>
+          {tags.map((tag, i) => (
+            <Link to={`/tag/${tag}`} key={i}>
               <Button outline color="danger" size="sm" className="mb-2 mr-2">
                 {tag}
               </Button>
