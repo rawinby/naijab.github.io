@@ -15,7 +15,7 @@ const PostList = ({ posts, isHome }) => {
               return (
                 <PostItem
                   title={title}
-                  image={featuredImage.childImageSharp.fluid}
+                  image={featuredImage.childImageSharp.fixed}
                   date={date}
                   slug={slug}
                   key={key}
