@@ -9,7 +9,9 @@ const Footer = () => {
         site {
           siteMetadata {
             author
+            siteUrl
             social {
+              email
               github
               facebook
               twitter
@@ -19,34 +21,34 @@ const Footer = () => {
       }
     `
   )
-  const { social } = bioQuery.site.siteMetadata
+  const { author, siteUrl, social } = bioQuery.site.siteMetadata
   return (
     <footer>
       <p>
         follow naijab at:
         <div className="p-1">
           <a href={`https://github.com/${social.github}`}>
-            <Button outline>
+            <Button outline className="mb-2">
               <FaGithub /> github
             </Button>
           </a>
           {"  "}
           <a href={`https://twitter.com/${social.twitter}`}>
-            <Button color="info" outline>
+            <Button color="info" className="mb-2" outline>
               <FaTwitter /> twitter
             </Button>
           </a>
           {"  "}
           <a href={`https://facebook.com/${social.facebook}`}>
-            <Button color="primary" outline>
+            <Button color="primary" className="mb-2" outline>
               <FaFacebook /> facebook
             </Button>
           </a>
         </div>
       </p>
       <p className="copyright">
-        © {new Date().getFullYear()} <a href="https://naijab.com">naijab.com</a>{" "}
-        by <a href="mailto:nainatjab999@gmail.com">Nattapon Pondongnok</a>
+        © {new Date().getFullYear()} <a href={siteUrl}>naijab.com</a> by{" "}
+        <a href={`mailto:${social.email}`}>{author}</a>
         <br /> Built with <a href="https://reactjs.org/">React</a> and{" "}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </p>

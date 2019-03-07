@@ -36,6 +36,7 @@ module.exports = {
       facebookAppId: `155791385048238`,
     },
     social: {
+      email: `nainatjab999@gmail.com`,
       github: `naijab`,
       facebook: `naijabcom`,
       twitter: `_naijab`,

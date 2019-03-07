@@ -17,6 +17,7 @@ const AuthorCard = () => {
           siteMetadata {
             author
             social {
+              email
               github
               facebook
               twitter
@@ -36,14 +37,15 @@ const AuthorCard = () => {
         className="author-image"
       />
       <p>
-        <strong>{author}</strong> <br /> แค่คนเหาชอบเขียนโค้ด คลั่งไคล้ Dark
-        Souls และร้องเพลงเป็นชีวิตจิตใจ <br />
+        <strong>{author}</strong>
+        <br /> แค่คนเหาชอบเขียนโค้ด คลั่งไคล้ Dark Souls
+        และร้องเพลงเป็นชีวิตจิตใจ <br />
         follow me: <a href={`https://twitter.com/${social.twitter}`}>
           twitter
         </a>{" "}
         <a href={`https://facebook.com/${social.facebook}`}>facebook</a>{" "}
-        <a href={`https://github.com/${social.github}`}>github</a>
-        <br />
+        <a href={`https://github.com/${social.github}`}>github</a>{" "}
+        <a href={`mailto:${social.email}`}>e-mail</a> <br />
         <span>#linux #darksouls #javascript #music #art #tech</span>
       </p>
     </div>
