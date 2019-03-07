@@ -41,6 +41,11 @@ const NavBar = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
+              <Link to="/" className="nav-link">
+                ALL
+              </Link>
+            </NavItem>
+            <NavItem>
               <Link to="/tag/life" className="nav-link">
                 LiFE
               </Link>
