@@ -41,7 +41,7 @@ export const pageQuery = graphql`
             featuredImage {
               childImageSharp {
                 fixed(width: 350, height: 160) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }
