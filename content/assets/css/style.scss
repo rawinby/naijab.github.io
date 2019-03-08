@@ -8,11 +8,11 @@ html {
 body {
   position: relative;
   margin: 0;
-  padding-bottom: 15rem;
+  padding-bottom: 17rem;
   min-height: 100%;
   font-family: $defaultFont;
   font-size: $fontSize;
-  background: $backgroundColor;
+  background: $whiteGreyColor;
   color: $textColor;
   padding-top: 3rem;
 }
@@ -60,6 +60,7 @@ a:visited {
   background: #ffffff;
   border-radius: 1rem;
   padding: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 10%);
   .author-image {
     float: left;
     margin-right: 1rem;
@@ -93,6 +94,11 @@ a:visited {
   font-weight: bold;
 }
 
+.navbar-white-shadow {
+  background: #ffffff;
+  box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 10%);
+}
+
 .navbar-red-shadow {
   background: linear-gradient(to right, $primaryColor, $darkPrimaryColor);
   box-shadow: 0 0.2rem 0.5rem darken($whiteGreyColor, 30%);
@@ -101,9 +107,9 @@ a:visited {
 .nav-item {
   margin: 0 0.5rem;
   .nav-link {
-    color: #ffffff;
+    color: darken($whiteGreyColor, 60%);
     &:hover {
-      color: #ffe419;
+      color: darken($whiteGreyColor, 90%);
     }
     &:last-child {
       padding-right: 0;

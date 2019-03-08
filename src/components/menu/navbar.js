@@ -9,7 +9,7 @@ const NavBar = () => {
     graphql`
       query {
         logoImage: file(
-          absolutePath: { regex: "/logo-naijab-with-text.png/" }
+          absolutePath: { regex: "/logo-naijab-with-text-red.png/" }
         ) {
           childImageSharp {
             fixed(height: 30) {
@@ -22,7 +22,7 @@ const NavBar = () => {
   )
 
   return (
-    <Navbar color="light" fixed="top" expand="md" className="navbar-red-shadow">
+    <Navbar fixed="top" expand="md" className="navbar-white-shadow">
       <Container>
         <Link to="/" className="navbar-brand">
           <Image

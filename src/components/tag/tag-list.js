@@ -11,7 +11,7 @@ const TagList = ({ tags }) => {
         <Then>
           {tags.map((tag, i) => (
             <Link to={`/tag/${tag}`} key={i}>
-              <Button outline color="danger" size="sm" className="mb-2 mr-2">
+              <Button size="sm" className="mb-1 mr-2">
                 {tag}
               </Button>
             </Link>
