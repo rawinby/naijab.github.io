@@ -9,10 +9,10 @@ const NavBar = () => {
     graphql`
       query {
         logoImage: file(
-          absolutePath: { regex: "/logo-naijab-with-text-red.png/" }
+          absolutePath: { regex: "/logo-naijab-with-text-dark.png/" }
         ) {
           childImageSharp {
-            fixed(height: 30) {
+            fixed(height: 32) {
               ...GatsbyImageSharpFixed
             }
           }
