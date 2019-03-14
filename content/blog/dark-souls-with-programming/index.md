@@ -52,7 +52,7 @@ Dark Souls ภาคแรกเปิดตัวในปี 2011 หรือ
 
   ถึงแม้จะผ่านไปได้ ก็จะได้เจอบททดสอบความพยายามอีกมากมายกับบอสที่หลากหลาย ที่หลายๆ คนถอดใจเลิกเล่น หรือปาจอยทิ้งก็มี ผมก็เกือบถอดใจเลิกเล่นสองครั้ง คือช่วงกลางเกม กับท้ายเกม เมื่อเราสามารถผ่านบททดสอบความพยายามนี้ไปได้ ในแต่ละบอส เราจะพบกับความโล่งใจ ดีใจหรืออาจจะร้องไห้ ว่าอย่างน้อยความพยายามของเราก็มีผลซะที (มีบอส Manus, Father of the Abyss ที่กว่าจะผ่านต้องตายซ้ำตายซาก 20 รอบ พอชนะก็เกือบร้องไห้เลย เพราะมันยากจริงๆ)
 
-![Manus, Father of the Abyss](https://vignette.wikia.nocookie.net/darksouls/images/f/fa/Manus%2C_Father_of_the_Abyss_Ingame.jpg/revision/latest?cb=20160702022012) Manus, Father of the Abyss ภาพจาก [vignette.wikia.nocookie.net](https://vignette.wikia.nocookie.net/darksouls/images/f/fa/Manus%2C_Father_of_the_Abyss_Ingame.jpg/revision/latest?cb=20160702022012)
+![Manus, Father of the Abyss](https://darksouls.wiki.fextralife.com/file/Dark-Souls/Charge_manus.jpg) Manus, Father of the Abyss ภาพจาก [darksouls.wiki.fextralife.com](https://darksouls.wiki.fextralife.com/file/Dark-Souls/Charge_manus.jpg)
 
 อ่านมาตั้งนานแล้วมันเกี่ยวอะไรกับการเขียนโปรแกรมใช่ไหมล่ะ? หลายๆ คน ถ้าอ่านไปแล้วคิดตาม จะเริ่มเข้าใจในบทความมากขึ้น ว่าผมต้องการจะสื่อถึงอะไร ถ้าอยากรู้ จะเฉลยโดยฟรีๆ เลย 555+
 
