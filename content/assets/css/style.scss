@@ -90,6 +90,12 @@ a:visited {
   padding: 3rem 0 6rem 0;
 }
 
+p img {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
 .menu-mobile-trigger {
   color: lighten($darkGreyColor, 10%);
   font-weight: bold;
