@@ -38,7 +38,7 @@ const AuthorCard = () => {
       />
       <p>
         <strong>{author}</strong>
-        <br /> แค่คนเหาชอบเขียนโค้ด คลั่งไคล้ Dark Souls
+        <br /> แค่คนเหงาชอบเขียนโค้ด คลั่งไคล้ Dark Souls
         และร้องเพลงเป็นชีวิตจิตใจ <br />
         follow me: <a href={`https://twitter.com/${social.twitter}`}>
           twitter
