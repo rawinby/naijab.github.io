@@ -33,7 +33,7 @@ const BlogPostTemplate = props => {
       </Row>
       <hr />
       <Row>
-        <Col sm="12">
+        <Col sm="12" className="pb-5">
           <DisqusComment title={post.frontmatter.title} id={post.id} />
         </Col>
       </Row>
