@@ -38,15 +38,17 @@ const AuthorCard = () => {
       />
       <p>
         <strong>{author}</strong>
-        <br /> แค่คนเหงาชอบเขียนโค้ด คลั่งไคล้ Dark Souls
-        และร้องเพลงเป็นชีวิตจิตใจ <br />
-        follow me: <a href={`https://twitter.com/${social.twitter}`}>
-          twitter
-        </a>{" "}
+        <br />
+        <span>
+          แค่คนเหงาชอบเขียนโค้ด คลั่งไคล้ Dark Souls และร้องเพลงเป็นชีวิตจิตใจ{" "}
+        </span>
+        <br />
+        follow me: {` `}
+        <a href={`https://twitter.com/${social.twitter}`}>twitter</a>{" "}
         <a href={`https://facebook.com/${social.facebook}`}>facebook</a>{" "}
         <a href={`https://github.com/${social.github}`}>github</a>{" "}
         <a href={`mailto:${social.email}`}>e-mail</a> <br />
-        <span>#linux #darksouls #javascript #music #art #tech</span>
+        <span>#coding #linux #darksouls #art #tech</span>
       </p>
     </div>
   )
