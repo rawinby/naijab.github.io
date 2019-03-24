@@ -113,7 +113,7 @@ module.exports = {
       options: {
         useMozJpeg: true,
         stripMetadata: true,
-        defaultQuality: 90,
+        defaultQuality: 95,
       },
     },
     `gatsby-plugin-polyfill-io`,
